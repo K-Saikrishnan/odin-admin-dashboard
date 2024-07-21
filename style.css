@@ -1,0 +1,285 @@
+:root {
+  --text-color: white;
+  --primary-color: #1992d4;
+  --bg-color: #e2e8f0;
+  --bg-secondary: white;
+  --avatar-color: #facc15;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  font-size: 100%;
+  vertical-align: baseline;
+  line-height: 1.25;
+}
+
+svg {
+  height: 25px;
+  width: 25px;
+  fill: black;
+}
+
+body {
+  display: flex;
+  background-color: var(--bg-color);
+}
+main {
+  width: 100%;
+}
+
+article#topbar {
+  padding: 1rem 1rem;
+  background-color: var(--bg-secondary);
+
+  section#profile-top {
+    margin-right: 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+
+    section#search {
+      display: flex;
+      justify-content: space-between;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    section#profile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+    }
+
+    svg#avatar {
+      height: 60px;
+      width: 60px;
+      fill: var(--avatar-color);
+    }
+
+    input {
+      background-color: var(--bg-color);
+      border-radius: 1rem;
+      width: 40rem;
+      height: 2.2rem;
+    }
+
+    span#name {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  }
+
+  section#welcome {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    section#welcome-avatar {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+    }
+
+    section#welcome-text {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+
+      p {
+        font-weight: bold;
+
+        &:first-child {
+          font-size: 1.25rem;
+        }
+
+        &:last-child {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    section#action-buttons {
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    svg#avatar-big {
+      height: 100px;
+      width: 100px;
+      fill: var(--avatar-color);
+    }
+  }
+
+  button {
+    width: 6rem;
+    margin-left: 1rem;
+    color: var(--text-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 1.5rem;
+    background-color: var(--primary-color);
+  }
+}
+
+section#content {
+  background-color: var(--bg-color);
+}
+
+section#content {
+  padding: 1rem 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+section#projects {
+  h1 {
+    margin: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  #cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  article {
+    background-color: var(--bg-secondary);
+    padding: 1rem;
+    box-shadow: -6px 0 0 var(--avatar-color);
+
+    h2 {
+      font-weight: bold;
+      font-size: 1.25rem;
+    }
+
+    p {
+      margin-top: 0.5rem;
+      color: #666;
+    }
+  }
+
+  .actions {
+    margin-top: 1.5rem;
+    display: flex;
+    justify-content: end;
+    gap: 1rem;
+  }
+}
+
+section#announcements {
+  h1 {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  #cards {
+    margin-top: 1rem;
+    background-color: white;
+  }
+
+  article {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1rem;
+    width: 90%;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #ccc;
+    }
+  }
+
+  p {
+    margin-top: 0.5rem;
+    color: #666;
+  }
+}
+
+section#trending {
+  h1 {
+    margin-top: 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+
+  #cards {
+    margin-top: 1rem;
+    background-color: white;
+    padding: 1rem 1.5rem;
+  }
+
+  article {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  svg {
+    height: 50px;
+    width: 50px;
+    fill: var(--avatar-color);
+  }
+
+  section.handle {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    p:first-child {
+      font-weight: bold;
+    }
+
+    p:last-child {
+      color: #666;
+    }
+  }
+}
+
+aside {
+  flex: 1;
+  width: min(30%, 300px);
+  height: 100vh;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  font-weight: bold;
+
+  #aside-heading {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  #dashboard-top,
+  #dashboard-btm {
+    ul {
+      list-style: none;
+    }
+    li {
+      margin: 1.5rem 0;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    margin-top: 4.5rem;
+    font-size: 1.3rem;
+  }
+
+  svg {
+    height: 30px;
+    width: 30px;
+    fill: var(--text-color);
+  }
+}
